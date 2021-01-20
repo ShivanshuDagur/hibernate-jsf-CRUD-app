@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+   
+</h:head>
+<h:body>
+    
+   <center><h2>*** Delete Employee Record ***</h2></center>
+  
+    <h:form id="deleteEmployeeById" styleClass="form-horizontal">
+        <h:panelGrid columns="2">
+            <div class="form-group">
+                <h:outputLabel value="Id:" styleClass="control-label" />
+                <div class="col-xs-10">
+                    <h:inputText value="#{employee.eid}" styleClass="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <h:commandButton value="Delete Employee Record" action="#{employee.deleteEmployeeRecord}" styleClass="btn btn-primary btn-sm btnPos" />
+                </div>
+            </div>
+        </h:panelGrid>
+        </h:form>
+ 
+
+</h:body>
+</html>

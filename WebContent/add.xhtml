@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Add Employee</title>
+</h:head>
+<h:body>
+    <center><h2>*** Add Employee Details ***</h2></center>
+    
+
+    <h:form id="EmployeeForm" styleClass="form-horizontal">
+        <h:panelGrid columns="2">
+            <div class="form-group">
+                <h:outputLabel value="Employee Id:" styleClass="control-label" />
+                <div class="col-xs-10">
+                    <h:inputText value="#{employee.eid}" styleClass="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel value="Name:" styleClass="control-label" />
+                <div class="col-xs-10">
+                    <h:inputText value="#{employee.empname}" styleClass="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel value="Age:" styleClass="control-label" />
+                <div class="col-xs-10">
+                    <h:inputText value="#{employee.age}" styleClass="form-control" />
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel value="Salary:" styleClass="control-label" />
+                <div class="col-xs-10">
+                    <h:inputText value="#{employee.salary}" styleClass="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                <br/>
+                    <h:commandButton value="Save Record" action="#{employee.saveEmployeeRecord}" styleClass="btn btn-primary btn-sm btnPos" />
+                </div>
+            </div>
+        </h:panelGrid>
+       
+    </h:form>
+</h:body>
+</html>

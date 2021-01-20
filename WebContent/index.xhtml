@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<style>
+.employeeTable {   
+   border-collapse:collapse;
+   font-family: arial, sans-serif;
+   width: 100%;
+}
+
+.employeeTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.employeeTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.employeeTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+</style>
+
+<h:head>
+	<title>Employee Management</title>
+</h:head>
+
+<h:body>
+	<center>
+		<h2>*** List of Employees ***</h2>
+	</center>
+	<h:dataTable value = "#{employee.employees}" var = "employee"
+   styleClass = "employeeTable"
+   headerClass = "employeeTableHeader"
+   rowClasses = "employeeTableOddRow,employeeTableEvenRow">
+   
+   <h:column>    				
+      <f:facet name = "header">EID</f:facet>    				
+      #{employee.eid}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">Name</f:facet>
+      #{employee.empname}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">Age</f:facet>
+      #{employee.age}
+   </h:column>
+   
+   <h:column>
+      <f:facet name = "header">Salary</f:facet>
+      #{employee.salary}
+   </h:column>
+</h:dataTable>
+	<h:form>
+	<br/>
+		<h:commandButton action="#{employee.getEmployeeTableData}" value="Get" />
+		<h:commandButton action="add" value="Add Employee" />
+		<h:commandButton action="update" value="Update Employee" />
+		<h:commandButton action="delete" value="Delete Employee" />
+	</h:form>
+	
+</h:body>
+</html>

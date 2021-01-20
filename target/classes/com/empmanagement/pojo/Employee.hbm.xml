@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.empmanagement.pojo.Employee" table="employee"
+		catalog="empdb" optimistic-lock="version">
+		<!-- <id name="eid" type="java.lang.Integer"> <column name="eid" /> <generator 
+			class="assigned" /> </id> -->
+
+		<id name="eid" type="int" column="eid">
+			
+		</id>
+		<property name="empname" type="string">
+			<column name="empname" />
+		</property>
+		<property name="salary" type="int">
+			<column name="salary" />
+		</property>
+		<property name="age" type="int">
+			<column name="age" />
+		</property>
+	</class>
+</hibernate-mapping>
